@@ -1,0 +1,1 @@
+require("../src/seed")().then(() => process.exit(0))

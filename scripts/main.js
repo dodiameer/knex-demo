@@ -1,0 +1,1 @@
+require("../src")().catch(e => console.error(e)).then(() => process.exit(0))

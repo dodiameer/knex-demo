@@ -1,0 +1,14 @@
+{
+  "name": "knex-testing",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "knex": "^0.21.16",
+    "sqlite3": "^5.0.1"
+  },
+  "scripts": {
+    "seed": "node ./scripts/seed.js",
+    "start": "node ./scripts/main.js"
+  }
+}
