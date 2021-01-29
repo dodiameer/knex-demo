@@ -7,13 +7,8 @@ function serializeTodo(todo) {
 }
 
 function serializeTodos(todos) {
-  return formatOutput(todos, "id", (existing, current) => {
-    if (existing) {
-      return serializeTodo(existing)
-    }
-    else {
-      return serializeTodo(current)
-    }
+  return formatOutput(todos, "id", (_existing, current) => {
+    return serializeTodo(current)
   })
 }
 
