@@ -1,11 +1,11 @@
 const db = require("../db")
 const { serializeUsers } = require("../utils/serialize/users")
 
-async function usersQuery() {
+async function usersQuery(limit = 10, offset = 0) {
   const users = await db("users")
     .select("users.id", "users.username")
-    .select("todos.content as todos_content", "todos.id as todos_id")
-    .innerJoin("todos", "todos.user_id", "users.id")
+    .limit(limit)
+    .offset(offset)
 
   const formattedUsers = serializeUsers(users)
 
