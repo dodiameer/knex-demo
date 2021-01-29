@@ -1,8 +1,8 @@
 const formatOutput = require("../formatOutput")
 
 function serializeTodo(todo) {
-  const { user_username, ...copy } = todo
-  copy.user = { username: user_username }
+  const { user_username, user_id, ...copy } = todo
+  copy.user = { id: user_id, username: user_username }
   return copy
 }
 
